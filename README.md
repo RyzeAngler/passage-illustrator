@@ -1,3 +1,5 @@
+<img src="assets/icon.png" width="64" height="64" alt="">
+
 # Passage Illustrator
 
 [简体中文](zh/passage-illustrator/README.md)
