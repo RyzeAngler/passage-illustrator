@@ -2,6 +2,8 @@
 name: passage-illustrator
 description: Create, continue, review, and revise illustrations based on a source text. Use for a single passage, poem, essay, story, or chapter that needs an illustration, a sequence, or artwork captioned with quotations. Also use to storyboard a passage, write image prompts, carry an established design into a new scene, or check existing artwork against the text.
 license: MIT
+metadata:
+  version: "1.1.0"
 ---
 
 # Illustrate a source text
@@ -10,27 +12,36 @@ Use the edition or passage the user specifies as the authority for events and qu
 
 When asked for illustrations, generate or edit the artwork with the tools available in the host application. Open each result and review it before delivery. If the user asks only for a storyboard, prompts, or a review, deliver that stage. If a required imaging tool is unavailable, identify the outstanding work and supply the materials needed to continue.
 
+## Start a new work before generating scenes
+
+At the start of a new work, read [Project setup](references/project-setup.md). Establish and save one explicit art direction, the global character, setting, and prop designs, and the applicable caption and cover specifications before generating the first story illustration. Select a named style or write a concrete visual description that fixes medium, linework, palette, rendering, and surface texture. Reuse these decisions throughout the work.
+
+For a chapter, installment, or illustrated sequence, the default deliverable is **one separate cover plus N finished illustrations with an editorial title and a source quotation**. Choose the quotations and reserve their space during storyboarding. Render them into the delivered PNGs. Create the cover artwork and title template when the work has none. Follow explicit requests for wordless art, a single illustration, or a particular production stage, and record that scope.
+
+A new work needs global designs created and reviewed before their first use. Inventory the entities in the current passage, establish their identities and versions, and assign those versions to every scene. Keep extending the same index as the work progresses. Prior scene images supply the immediate scene state alongside those designs.
+
 ## Production sequence
 
 | Stage | Work to complete | Ready to proceed when |
 | --- | --- | --- |
+| Project setup | Record explicit art direction, global entity designs, caption layout, and cover plan. | The style is drawable, current entities have stable identities and versions, and the full deliverables are defined. |
 | Source text | Extract the passage, assign stable paragraph IDs, and record its provenance. | The selected passage, reading order, and wording match the source. |
 | Storyboard | Decide how many images to make. For each, record one moment, the source facts, the artistic choices, and the review criteria. | The sequence reads coherently. The actions and viewpoint fit this point in the story. |
-| Reference assets | Locate the relevant character designs, story stages, props, and settings. Identify what each reference establishes. | Key features are explicit, and the actual reference files have been opened and checked. |
+| Reference assets | Create or locate the relevant character designs, story stages, props, and settings. Bind each scene to the applicable entity versions and checked references. | Key features are explicit, and the actual reference files have been opened and checked. |
 | Prompt | Write a detailed, self-contained description that can be drawn as a single image. | The actors, actions, objects, and spatial directions are unambiguous. The chosen composition shows the essential relationships. |
 | Master artwork | Review each candidate for fidelity to the text, physical and spatial coherence, and continuity. | Every confirmed error has been corrected and each applicable critical check has passed. Resolve anything too unclear to assess. |
-| Finished illustration | Add captions and prepare the cover when requested. Inspect the whole image and the details. | The content is correct, and important relationships remain visible after cropping and typesetting. |
+| Finished illustration | Complete the agreed final-image scope, including captioned PNGs, a separate cover, and its type layer for standard chapter production. Inspect the whole image and the details. | The content is correct, and important relationships remain visible after cropping and typesetting. |
 | Delivery | Check the files and archive contents. Update the current review findings. | Visual and technical checks apply to the current files, links work, and retained materials support revision and re-export. |
 
 Record production review, technical verification, and user sign-off separately. A successful generation or export establishes only that the tool completed its operation. Carry out revisions within the authorization already given.
 
 ## Working through a project
 
-1. Establish where the authoritative text, storyboard, reference assignments, master artwork, and current review findings live. Follow an existing project's directory conventions. See [Production files and retention](references/materials.md).
-2. Locate the source passage, plan the sequence, and define what needs to be visible in each image. Check the established designs, each character's state at this point, and the relevant earlier illustrations. See [Source text and storyboarding](references/source-and-scenes.md) and [Reference assets and continuity](references/continuity.md).
-3. Use the prompt-writing standard below and the appropriate [image prompt template](references/prompts.md). Read the completed prompt as a description of one still image before submitting it.
+1. Complete [Project setup](references/project-setup.md), creating missing art direction and global designs, plus caption layouts and cover materials required by the recorded scope. Establish where the authoritative text, storyboard, reference assignments, master artwork, and current review findings live. Follow an existing project's directory conventions. See [Production files and retention](references/materials.md).
+2. Locate the source passage, plan the sequence, and define what needs to be visible in each image. Bind the global character, setting, and prop versions to each scene. Check state transitions and the relevant earlier illustrations. See [Source text and storyboarding](references/source-and-scenes.md) and [Reference assets and continuity](references/continuity.md).
+3. Use the prompt-writing standard below and the appropriate [image prompt template](references/prompts.md), including the cover template when a cover is due. Copy the established art-direction paragraph and expand the bound entity features into each prompt. Read the completed prompt as a description of one still image before submitting it.
 4. Open each candidate and check it against the source text, physical and spatial relationships, and related illustrations. Trace any error back to the storyboard, prompt, reference asset, or artwork. Review the correction before accepting the image. See [Visual review and revision](references/review-and-revision.md).
-5. Inspect the finished work, assemble the deliverables, and retain the materials needed for further use. See [Lettering, export, and delivery](references/delivery.md) and [Production files and retention](references/materials.md). The optional [PNG exporter](scripts/export.py) requires Python 3.10+ and Pillow 10.1+. Its inputs and commands are documented in [Export configuration](references/export-format.md).
+5. Complete the final images defined in the recorded scope. For standard chapter production, typeset captions into the PNGs and create the separate cover and type layer. Check the deliverables against the scope recorded at setup, then inspect the finished work, assemble the deliverables, and retain the materials needed for further use. See [Lettering, export, and delivery](references/delivery.md) and [Production files and retention](references/materials.md). The optional [PNG exporter](scripts/export.py) requires Python 3.10+ and Pillow 10.1+. Its inputs and commands are documented in [Export configuration](references/export-format.md).
 
 ## Writing image prompts
 
@@ -69,13 +80,15 @@ Omit elements that do not apply. A distant figure needs only the detail the fram
 10. **Use tool-specific controls correctly.** Describe the composition and aspect ratio in the prompt. Set supported dimensions, masks, and other controls in the tool call. Use negative prompts or weights only where the selected tool supports them.
 11. **Consolidate accepted revisions.** Rewrite the affected passages and remove superseded poses, materials, viewpoints, or instructions. Retain one complete, internally consistent prompt for the current artwork.
 
-### Three kinds of image prompt
+### Image prompt types
 
 Use the appropriate [built-in template](references/prompts.md). Replace its fields with the facts, design decisions, and visible relationships for this image. Retain the complete generation prompt. After accepting a local edit, incorporate the resulting visual state into that prompt.
 
 - **First illustration.** Describe the subject, action, space, objects, and technique so the image can be drawn without earlier conversation or project memory.
 - **Next illustration in a sequence.** Establish the features and scene state that carry forward, then describe what changes. For a fixed viewpoint, specify fixed positions and contact points. For a change of viewpoint, describe depth, left and right, and occlusion from the new position.
 - **Local edit.** Identify the target image, visible defect, edit boundary, intended result, and elements to preserve. Include any connected structures needed to make the correction work.
+
+- **Cover artwork.** Use the established art direction for a dedicated background with planned title space. Generate and review it, then typeset the work title, installment identifier, and chapter title.
 
 ### Before submitting
 

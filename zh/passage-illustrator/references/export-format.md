@@ -43,6 +43,8 @@ uv run --project "$skill_dir" python "$skill_dir/scripts/export.py" "$work_dir/p
 - 横排为默认；简单竖排指定 direction 为 vertical 及字步 step，按单字直立排布。每列提供独立起点。颜色采用 RGB 色值。每块可独立指定 font、font_index 和可选的纸色衬底 paper。
 - 输出 sRGB RGB PNG。输入有嵌入色彩配置时转换到 sRGB；普通无标记 RGB 素材按 sRGB 处理。透明底图先按作品约定合成到底色，再登记为有效底图。精确引文匹配与边界检查通过后，还需逐字查看实际字体覆盖、断行及画面遮挡。
 
+用实际字体试导出后再定文字坐标。柔边衬底会超出字形边界，相邻文字块要给外扩和羽化留足间距。导出器报告重叠时调整间距、外扩或衬底后重新导出，再检查实际阅读尺寸的 PNG。
+
 ## 输出和故障定位
 
 图号对应独立 PNG；manifest.json 记录顺序、段落 ID、底图与成图 SHA-256、实际尺寸和文字；index.html 离线审阅；images.zip 按清单顺序只收录故事图。配置封面时另存 cover.png 与 cover-text.png。请求总览时另存 contact-sheet.jpg。命令以 JSON 输出目录、图数和包哈希，校验失败会以非零状态退出，避免交付半套结果。

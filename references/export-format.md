@@ -43,6 +43,8 @@ Place the following array in an image's `labels` field. This example quotes the 
 - Text runs horizontally by default. For a simple vertical column of upright characters, set `direction` to `vertical` and specify the character advance with `step`. Give each column a separate origin. Use RGB colors. Individual blocks can override `font` and `font_index` and specify a `paper` backing.
 - The exporter writes RGB PNGs in sRGB. It converts images with embedded color profiles to sRGB and treats untagged RGB artwork as sRGB. Flatten transparent artwork onto the intended background before recording it as a master. After quotation and bounds checks pass, inspect glyph coverage, line breaks, and any obscured artwork in the rendered image.
 
+Run a provisional export with the actual font before finalizing text positions. Soft backings extend beyond the glyph bounds and adjacent blocks need enough space for their padding and feathered edges. If the exporter reports an overlap, adjust spacing, padding, or backing and export again. Check the resulting PNG at its intended reading size.
+
 ## Outputs and diagnostics
 
 Each image ID corresponds to a PNG. `manifest.json` records reading order, paragraph IDs, SHA-256 hashes of masters and finished images, actual dimensions, and rendered wording. Open `index.html` for offline review. `images.zip` contains the illustrations in manifest order. A cover produces `cover.png` and `cover-text.png` separately. A requested contact sheet is saved as `contact-sheet.jpg`.

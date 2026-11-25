@@ -1,5 +1,7 @@
 # Reference assets and continuity
 
+For a new work, create the global asset index and the current character, setting, and prop designs as described in [Project setup](project-setup.md). Keep these records at work level so later chapters can find them. Establish the references before the first story image that uses them.
+
 Consult the project's asset index first. Add a design only when the relevant identity, story stage, location, or object is missing. Map aliases to the same character. A new costume, piece of equipment, or condition may distinguish a later stage while the character's facial structure remains recognizable.
 
 | Reference | Features to establish |
@@ -17,3 +19,5 @@ Open the actual image before adopting a reference. A candidate can guide subsequ
 For each new illustration, compare both the established design and the relevant preceding images. The design anchors identity across the work. The earlier image establishes the state of this particular scene. Inspect the result even when two images use the same input file. When the viewpoint changes, preserve the object's identity, the character's anatomical left and right, and the spatial relationships. Screen position and apparent shape can change with perspective.
 
 When an asset changes, identify and check every affected illustration in the current production list. When an earlier image changes, recheck the continuity of later images that depend on it. Retain asset versions still referenced by other chapters or passages.
+
+Each storyboard entry and production task binds the entity ID, story stage, design version, actual reference file, and purpose. Track the state before the scene, the change depicted, and the resulting state. Use checked character sheets, prop studies, and spatial sketches for recurring or structurally important entities. Expand the necessary features into the generation prompt and supply the relevant references in the actual tool call.

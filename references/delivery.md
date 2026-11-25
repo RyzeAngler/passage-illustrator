@@ -1,5 +1,7 @@
 # Lettering, export, and delivery
 
+For a chapter or series, follow the default package and initial specifications in [Project setup](project-setup.md). Resolve the art direction and typography before generation. At final review, check the actual captioned PNGs, separate cover PNG, and transparent cover type layer against that package. Follow a recorded explicit scope such as wordless art or a single illustration.
+
 ## Captions, lettering within the scene, and page layout
 
 For inscriptions, signs, and other lettering within the scene, use the wording, letterforms, and writing conventions appropriate to the text and setting. Proofread each character. Check the surface it belongs to and how perspective, texture, and light affect the lettering. Text that matters to the story must remain legible at delivery size.
@@ -20,7 +22,7 @@ Link each layout to its image ID, title, master artwork path and hash, source pa
 
 ## Covers and export
 
-A series with a common cover design uses dedicated cover artwork and a shared template. Store the background, canvas, fonts, and title positions in the template. Set the installment identifier and title for each cover. For long titles, inspect the bounds and reading order, then adjust position and type size as needed. Retain the flattened cover, its transparent type layer, the source background, the font information, and the relevant hashes for future editions.
+A new chapter or series needs dedicated cover artwork and a shared title template created as part of production. Generate the background using the cover prompt and global art direction, open it, review it, and record its source and hash. An established series reuses the effective background and template. Store the background, canvas, fonts, and title positions in the template. Set the installment identifier and title for each cover. For long titles, inspect the bounds and reading order, then adjust position and type size as needed. Retain the flattened cover, its transparent type layer, the source background, the font information, and the relevant hashes for future editions.
 
 Use the project's existing tools or the bundled exporter. The bundled tool produces illustration PNGs, an HTML review page, a manifest, and an ordered ZIP of the illustrations. A configured cover also produces a separate cover image and transparent type layer. Request a JPEG contact sheet when useful. See [Export configuration](export-format.md).
 

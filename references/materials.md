@@ -4,6 +4,7 @@ Maintain one authoritative source for each kind of information. Record the decis
 
 | Material | What to retain |
 | --- | --- |
+| Global art direction and asset index | One named style or full visual specification, its reusable prompt paragraph and reviewed style reference, output and layout specifications, stable entity IDs, design versions, and actual reference files. Keep these at work level and update them across chapters. |
 | Source text and provenance | Ordered paragraphs or lines of verse with stable IDs, content types, and original wording. Record the file, edition, chapter or page location, and SHA-256 for a file-based source. Keep the relevant image evidence for undeciphered characters. Preserve paragraph breaks in pasted text. |
 | Storyboard | The overview gives the passage boundaries, image count and rationale, omissions, chronology, and any departure from the usual specifications. Each entry identifies its evidence, depicted instant, composition, artistic choices, and review criteria. |
 | Image prompts | One current, complete prompt per illustration. In a file-based project, retain it as plain text. Fold accepted local edits into the full prompt. |
