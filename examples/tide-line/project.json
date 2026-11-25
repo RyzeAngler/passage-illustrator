@@ -1,0 +1,21 @@
+{
+  "title": "After the Tide",
+  "canvas": [
+    1536,
+    1024
+  ],
+  "paragraphs": {
+    "p1": "The tide had just gone out. A single white shell lay on the lowest of the gray stone steps."
+  },
+  "images": [
+    {
+      "id": "01",
+      "title": "The Lowest Step",
+      "base": "base.png",
+      "sha256": "4f570b8cf344ab8541cdef68304dbe9200a88d90f76b1d164d44cc56641a754c",
+      "sources": [
+        "p1"
+      ]
+    }
+  ]
+}

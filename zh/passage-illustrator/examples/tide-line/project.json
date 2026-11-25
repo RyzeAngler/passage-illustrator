@@ -1,0 +1,16 @@
+{
+  "title": "潮退以后",
+  "canvas": [1536, 1024],
+  "paragraphs": {
+    "p1": "潮水刚退。灰色石阶的最低一级上，留着一枚白贝壳。"
+  },
+  "images": [
+    {
+      "id": "01",
+      "title": "最低一级",
+      "base": "base.png",
+      "sha256": "4f570b8cf344ab8541cdef68304dbe9200a88d90f76b1d164d44cc56641a754c",
+      "sources": ["p1"]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Passage Illustrator"
+  short_description: "Create and review illustrations grounded in a source text."
+  default_prompt: "Use $passage-illustrator to illustrate this passage and check the finished artwork against the text."

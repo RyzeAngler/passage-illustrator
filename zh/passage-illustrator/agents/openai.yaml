@@ -1,0 +1,4 @@
+interface:
+  display_name: "Passage Illustrator · 原文配图"
+  short_description: "依据原文选景并制作插画，维护跨图连续性，核对画面、返修并交付成图"
+  default_prompt: "请用 $passage-illustrator 为我提供的原文制作配图，按原文核对画面后交付。"

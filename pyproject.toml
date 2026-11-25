@@ -1,0 +1,9 @@
+[project]
+name = "passage-illustrator"
+version = "1.0.0"
+description = "Tools for exporting source-grounded illustrations"
+requires-python = ">=3.10"
+dependencies = ["Pillow>=10.1"]
+
+[dependency-groups]
+dev = ["pytest>=8", "PyYAML>=6", "ruff"]

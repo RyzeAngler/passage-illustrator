@@ -1,0 +1,50 @@
+# 导出配置与命令
+
+把作品配置、底图和需要的字体放在同一作品目录内。所有输入路径相对配置文件，允许子目录。以 UTF-8 保存 JSON。运行命令时，将 skill_dir 替换成已安装 Skill 的目录，work_dir 指向作品目录。
+
+~~~bash
+uv run --project "$skill_dir" python "$skill_dir/scripts/export.py" "$work_dir/project.json" --out "$work_dir/edition-01"
+~~~
+
+已有 Python 3.10+ 和 Pillow 10.1+ 的环境也可直接运行脚本。选用新的输出目录，返修后可另存一份核对。加 --contact-sheet 生成带图号的 JPEG 总览。可以直接用发行包中的 examples/tide-line/project.json 试跑，原例无需字体。
+
+## 工作配置
+
+| 字段 | 用法 |
+| --- | --- |
+| title、canvas | 作品标题和成品像素 [宽, 高]。每幅图可另给 canvas |
+| paragraphs | 原文段落 ID 到原字串的对象，按阅读顺序排列 |
+| images | 按最终阅读顺序列出插画。每项给 id（唯一数字字符串）、title、base、sha256、sources（按原文顺序的段落 ID 列表） |
+| centering | 单图可设两轴裁切重心，介于 0 至 1，默认居中。使用等比填满裁切 |
+| font | 有配文时给可读取的字体文件相对路径。字体集合可在文字块指定 font_index。自备适合当前语言且可用于作品的字体 |
+| labels | 单图的画外文字块；无字画可省略 |
+| cover | 可选。复用同样的底图与文字参数，采用单独封面底画，也可另定画幅。封面可无 sources；引用正文时补齐 |
+
+先从采用的底图计算 SHA-256，并在目视复核时记录。macOS 可用 shasum -a 256，Linux 可用 sha256sum。若工具报告底图哈希已变，打开新底图核对受影响部分，采用后再更新哈希。
+
+## 画外文字
+
+将下面的数组放入单图的 labels。每块用 xy 指定最终画布上的排字起点（像素），字号单位也是像素。绝对位置与选定字体共同决定实际字形边界。按最终画幅逐图选位置。
+
+~~~json
+[
+  {
+    "quote": [{"source": "p1", "text": "潮水刚退。"}],
+    "xy": [70, 62],
+    "size": 38,
+    "color": "#213b38",
+    "paper": {"color": "#f6f2dc", "opacity": 145, "padding": 12, "blur": 4}
+  }
+]
+~~~
+
+- 原引使用 quote。每个片段须出自本镜 sources 中的一个段落，片段按原文顺序排列；多个摘句显示时用省略号连接。连续原句使用一个片段。若需横向分行或竖排多列，可拆为多个文字块并复核阅读顺序。
+- 编辑标题、地点、译文等使用 text，可在配置旁记录翻译或转写依据。若需要复杂文字整形、特殊标点挤压或翻译对齐，可选用作品自己的排版工具。
+- 横排为默认；简单竖排指定 direction 为 vertical 及字步 step，按单字直立排布。每列提供独立起点。颜色采用 RGB 色值。每块可独立指定 font、font_index 和可选的纸色衬底 paper。
+- 输出 sRGB RGB PNG。输入有嵌入色彩配置时转换到 sRGB；普通无标记 RGB 素材按 sRGB 处理。透明底图先按作品约定合成到底色，再登记为有效底图。精确引文匹配与边界检查通过后，还需逐字查看实际字体覆盖、断行及画面遮挡。
+
+## 输出和故障定位
+
+图号对应独立 PNG；manifest.json 记录顺序、段落 ID、底图与成图 SHA-256、实际尺寸和文字；index.html 离线审阅；images.zip 按清单顺序只收录故事图。配置封面时另存 cover.png 与 cover-text.png。请求总览时另存 contact-sheet.jpg。命令以 JSON 输出目录、图数和包哈希，校验失败会以非零状态退出，避免交付半套结果。
+
+使用 index.html 查看整组，再打开各张实际 PNG。目视判断另存到作品审阅材料，并关联 manifest.json 中的对应哈希。修改配文时从同一底图重新排版；源图、提示词和设计依据继续保存在作品目录。
