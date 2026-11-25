@@ -1,20 +1,28 @@
 ---
 name: passage-illustrator
-description: Create, continue, review, and revise illustrations based on a source text. Use for a single passage, poem, essay, story, or chapter that needs an illustration, a sequence, or artwork captioned with quotations. Also use to storyboard a passage, write image prompts, carry an established design into a new scene, or check existing artwork against the text.
+description: Create, continue, review, and revise source-based illustrations in a fixed gongbi style on a silk-textured ground. Use for a single passage, poem, essay, story, or chapter that needs an illustration, a sequence, or artwork captioned with quotations. Also use to storyboard a passage, write image prompts, carry an established design into a new scene, or check existing artwork against the text.
 license: MIT
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # Illustrate a source text
 
-Use the edition or passage the user specifies as the authority for events and quotations. Read the entire passage in scope. Choose the number of illustrations according to the user's request and the density of the material. Select one observable moment for each image. Carry forward the work's established style, character designs, props, and settings. Follow its specifications for aspect ratio, output dimensions, reading direction, lettering within the scene, captions, and series covers.
+Use the edition or passage the user specifies as the authority for events and quotations. Read the entire passage in scope. Choose the number of illustrations according to the user's request and the density of the material. Select one observable moment for each image. Apply this skill's fixed style below. Carry forward the work's character designs, props, and settings. Follow its specifications for aspect ratio, output dimensions, reading direction, lettering within the scene, captions, and series covers.
 
 When asked for illustrations, generate or edit the artwork with the tools available in the host application. Open each result and review it before delivery. If the user asks only for a storyboard, prompts, or a review, deliver that stage. If a required imaging tool is unavailable, identify the outstanding work and supply the materials needed to continue.
 
+## Fixed art style
+
+**Gongbi Narrative Illustration on a Silk-Textured Ground**
+
+Use gongbi narrative illustration on a silk-textured ground. Define forms with fine, continuous dark-umber ink contours and controlled variation in line weight. Clearly articulate faces, garment folds, object construction, and architectural details. Build a restrained palette of muted azurite blue, malachite green, ochre, and ivory, with small touches of cinnabar. Apply thin layers of color to create the warm, matte character of mineral pigments. Retain a pale, warm silk ground with fine woven texture, restrained tonal modeling, and soft light. Give figures natural proportions and credible anatomy, gestures, grips, and weight-bearing poses. Render rocks, vegetation, buildings, and objects with ordered variation in line density and color. Establish clear depth and soften the background enough to emphasize the figures and decisive action. The overall effect is quiet, refined, and traditional, with the precision of gongbi painting and the clarity of narrative illustration.
+
+This is the skill's built-in art direction for character sheets, settings, props, story illustrations, and covers. Include this paragraph in every generation prompt. Read the passage to determine what appears and what happens. Keep this painting technique consistent as the subject, time of day, weather, and mood change. Resolve any explicit request for a different painting technique with the user before changing the style.
+
 ## Start a new work before generating scenes
 
-At the start of a new work, read [Project setup](references/project-setup.md). Establish and save one explicit art direction, the global character, setting, and prop designs, and the applicable caption and cover specifications before generating the first story illustration. Select a named style or write a concrete visual description that fixes medium, linework, palette, rendering, and surface texture. Reuse these decisions throughout the work.
+At the start of a new work, read [Project setup](references/project-setup.md). Apply the fixed art-direction paragraph above. Establish and save the global character, setting, and prop designs and the applicable caption and cover specifications before generating the first story illustration.
 
 For a chapter, installment, or illustrated sequence, the default deliverable is **one separate cover plus N finished illustrations with an editorial title and a source quotation**. Choose the quotations and reserve their space during storyboarding. Render them into the delivered PNGs. Create the cover artwork and title template when the work has none. Follow explicit requests for wordless art, a single illustration, or a particular production stage, and record that scope.
 
@@ -24,8 +32,8 @@ A new work needs global designs created and reviewed before their first use. Inv
 
 | Stage | Work to complete | Ready to proceed when |
 | --- | --- | --- |
-| Project setup | Record explicit art direction, global entity designs, caption layout, and cover plan. | The style is drawable, current entities have stable identities and versions, and the full deliverables are defined. |
 | Source text | Extract the passage, assign stable paragraph IDs, and record its provenance. | The selected passage, reading order, and wording match the source. |
+| Global modeling | Apply the fixed style, establish entity designs and reference tasks, and plan captions and the cover. | Current entities have stable identities and versions, the fixed drawing technique is applied, and deliverables are defined. |
 | Storyboard | Decide how many images to make. For each, record one moment, the source facts, the artistic choices, and the review criteria. | The sequence reads coherently. The actions and viewpoint fit this point in the story. |
 | Reference assets | Create or locate the relevant character designs, story stages, props, and settings. Bind each scene to the applicable entity versions and checked references. | Key features are explicit, and the actual reference files have been opened and checked. |
 | Prompt | Write a detailed, self-contained description that can be drawn as a single image. | The actors, actions, objects, and spatial directions are unambiguous. The chosen composition shows the essential relationships. |
@@ -35,11 +43,19 @@ A new work needs global designs created and reviewed before their first use. Inv
 
 Record production review, technical verification, and user sign-off separately. A successful generation or export establishes only that the tool completed its operation. Carry out revisions within the authorization already given.
 
+## Production order and file locations
+
+Extract and read the passage, establish the global entity designs, bind them in the storyboard, prepare references, generate story masters, typeset captions, compose the chapter cover, then review and export. The first style study uses the fixed paragraph above. A dedicated series cover background can be prepared alongside the global references before story generation. Chapter cover assembly follows verification of the title and chapter identifier.
+
+Follow the established production layout. Global designs and versions live in `美术资产库/`, with the index at `美术资产库/资产索引.json`. Shared cover artwork and the template live in `账号物料/系列封面/`. Each chapter keeps its own cover configuration, flattened cover, and type layer in `封面/`, and story exports in `成图/`. See the full [workspace layout](references/materials.md#workspace-layout).
+
+Use English ASCII names for all code files created for production, with lowercase snake_case such as `tools/typeset_chapter.py` and `tools/render_cover.py`. Update callers and documentation together when renaming an existing script.
+
 ## Working through a project
 
-1. Complete [Project setup](references/project-setup.md), creating missing art direction and global designs, plus caption layouts and cover materials required by the recorded scope. Establish where the authoritative text, storyboard, reference assignments, master artwork, and current review findings live. Follow an existing project's directory conventions. See [Production files and retention](references/materials.md).
-2. Locate the source passage, plan the sequence, and define what needs to be visible in each image. Bind the global character, setting, and prop versions to each scene. Check state transitions and the relevant earlier illustrations. See [Source text and storyboarding](references/source-and-scenes.md) and [Reference assets and continuity](references/continuity.md).
-3. Use the prompt-writing standard below and the appropriate [image prompt template](references/prompts.md), including the cover template when a cover is due. Copy the established art-direction paragraph and expand the bound entity features into each prompt. Read the completed prompt as a description of one still image before submitting it.
+1. Locate the user's edition and production scope. Read [Project setup](references/project-setup.md), establish the work-root paths, and find existing source records, designs, layouts, and cover materials. See [Production files and retention](references/materials.md).
+2. Extract and read the source passage. Establish or check the global character, setting, and prop designs in the fixed style before storyboarding. Prepare the necessary references, then bind the entity versions and states in each scene and select its source quotation. See [Source text and storyboarding](references/source-and-scenes.md) and [Reference assets and continuity](references/continuity.md).
+3. Use the prompt-writing standard below and the appropriate [image prompt template](references/prompts.md), including the cover template when a cover is due. Copy this skill's fixed art-direction paragraph and expand the bound entity features into each prompt. Read the completed prompt as a description of one still image before submitting it.
 4. Open each candidate and check it against the source text, physical and spatial relationships, and related illustrations. Trace any error back to the storyboard, prompt, reference asset, or artwork. Review the correction before accepting the image. See [Visual review and revision](references/review-and-revision.md).
 5. Complete the final images defined in the recorded scope. For standard chapter production, typeset captions into the PNGs and create the separate cover and type layer. Check the deliverables against the scope recorded at setup, then inspect the finished work, assemble the deliverables, and retain the materials needed for further use. See [Lettering, export, and delivery](references/delivery.md) and [Production files and retention](references/materials.md). The optional [PNG exporter](scripts/export.py) requires Python 3.10+ and Pillow 10.1+. Its inputs and commands are documented in [Export configuration](references/export-format.md).
 
@@ -88,7 +104,7 @@ Use the appropriate [built-in template](references/prompts.md). Replace its fiel
 - **Next illustration in a sequence.** Establish the features and scene state that carry forward, then describe what changes. For a fixed viewpoint, specify fixed positions and contact points. For a change of viewpoint, describe depth, left and right, and occlusion from the new position.
 - **Local edit.** Identify the target image, visible defect, edit boundary, intended result, and elements to preserve. Include any connected structures needed to make the correction work.
 
-- **Cover artwork.** Use the established art direction for a dedicated background with planned title space. Generate and review it, then typeset the work title, installment identifier, and chapter title.
+- **Cover artwork.** Use this skill's fixed art direction for a dedicated background with planned title space. Generate and review it, then typeset the chapter identifier and original chapter title.
 
 ### Before submitting
 

@@ -2,21 +2,11 @@
 
 Complete this setup when taking on a new work. For an existing project, read and check the current specifications, then fill any gaps relevant to this production. Apply the recorded delivery scope to every stage and checklist below, including caption and cover requirements. Record the applicable decisions in the project directory before generating the first story illustration. Reuse them in later chapters. Update equivalent files when the project already has them.
 
-## Establish a definite art style
+## Apply the skill's fixed art style
 
-Record an explicit style name or a complete description that can directly guide the artwork, then specify the visual treatment in detail. Terms such as “landscape” or “pastoral” can describe subject matter and atmosphere. Also establish how the work will be painted.
+Use **Gongbi Narrative Illustration on a Silk-Textured Ground**, as defined in SKILL.md. Include that complete paragraph in reference studies, story prompts, and cover prompts. Record the skill version and the paths and hashes of the production references. Keep the current work's identity designs, layout, and output settings alongside them.
 
-| Element | Decisions to record |
-| --- | --- |
-| Style and scope | The principal style for the work, the characters, settings, and covers it applies to, and any necessary chapter-specific variations. |
-| Medium and linework | The chosen technique, such as gongbi, xieyi, watercolor, or woodcut, and the treatment of contours, line weight, stroke endings, and edges. |
-| Color and materials | The palette, tonal range, layered washes or flat color, paper or silk texture, and treatment of different materials. |
-| Form and space | Figure proportions, facial treatment, object construction, depth, perspective, and how clearly complex actions must be shown. |
-| Light and atmosphere | Light sources, tonal structure, treatment of day and night, and visual features that persist as the mood changes between scenes. |
-| Reusable art-direction passage | A fixed description of the visual treatment to include in each image prompt. Adjust time of day, weather, and mood for the individual scene. |
-| Output and layout | Aspect ratio, dimensions, color space, font, hierarchy of main text and editorial titles, reading direction, and cover format. |
-
-Follow the user's stated art direction when provided. For a new work without one, select a specific approach suited to the passage, subjects, and intended use. Explain and record the choice, then continue production. Clarify mutually incompatible requirements when they arise. Produce a style study in which the linework, color treatment, and forms can be inspected. Open and review it before registering it as the style reference. The first character reference image or the dedicated cover artwork can also serve this purpose. Record production review and user-review status separately.
+Produce a reference image using this painting technique, open it, and check it against the fixed description. A character sheet or dedicated cover background can serve as the first style reference. This establishes how the built-in style has been realized in the work. Keep production review and user-review status separate. Select the characters, environments, and props from the passage and preserve their source-based states. Depict changing light, weather, and mood within the same technique.
 
 ## Model characters, settings, and props across the work
 
@@ -42,11 +32,11 @@ For an illustrated Chinese classic with no existing layout, use portrait 1080 ×
 
 Select the quotations and record their source IDs while storyboarding. Plan the editorial titles and text areas at the same time. After accepting the master artwork, use a typesetting tool to render the text into the finished PNG. Retain the master without editorial captions. Check the wording and reading order in the actual finished image.
 
-For a new series, prepare dedicated cover artwork. Use the reusable art-direction passage and the cover prompt to generate it, then open and review the result before establishing the title template. Set the work title, chapter or installment identifier, and title for each cover, following the language's reading order. Retain a transparent type layer. Reuse the accepted cover artwork and layout in subsequent installments.
+For a new series, prepare dedicated cover artwork. Use the fixed art-direction paragraph in SKILL.md and the cover prompt to generate it, then open and review the result before establishing the title template. Use the existing cover template: the chapter identifier followed by the original chapter title. For a two-part Chinese chapter title, set the three vertical columns from right to left as chapter identifier, first title line, and second title line. Retain a transparent type layer. Reuse the accepted cover artwork and layout in subsequent installments.
 
 ## Check before generating story illustrations
 
-- The shared style has an explicit name or a complete description. The art-direction passage and reviewed reference can be read.
+- The fixed style paragraph in SKILL.md is applied to the prompts, and its reviewed production reference is available.
 - Characters, settings, and props appearing in the current production have designs, story stages, and current versions. The key references are ready and each image's reference assignments are complete.
 - For captioned output, quotations, editorial titles, layout, and clear space are planned for each image. A recorded wordless or stage-specific request defines the applicable work.
 - Where the delivery scope includes a cover, its artwork and template have an accepted source or are scheduled for actual production in this task. The cover wording and output paths are explicit.

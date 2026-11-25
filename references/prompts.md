@@ -5,9 +5,9 @@ Choose a template for a first illustration, a subsequent illustration, a local e
 ## First illustration
 
 ~~~text
-Use the work's established [style name and complete art-direction paragraph, including linework, palette, rendering, and texture]. Carry forward [visible features of the bound character, setting, and prop versions].
+Use Gongbi Narrative Illustration on a Silk-Textured Ground. [Insert the complete fixed art-direction paragraph from SKILL.md.] Carry forward [visible features of the bound character, setting, and prop versions].
 
-Create a [medium and aspect ratio] illustration set in [place and visible surroundings] at [time or lighting condition]. Depict the instant when [one event or state]. The viewer's eye goes first to [focal subject and its visible condition]. [Visible trace] shows that [earlier event] has already taken place.
+Create a [aspect ratio] illustration set in [place and visible surroundings] at [time or lighting condition]. Depict the instant when [one event or state]. The viewer's eye goes first to [focal subject and its visible condition]. [Visible trace] shows that [earlier event] has already taken place.
 
 [Principal figure, identity, and appearance at this stage] stands or sits [position relative to the scene]. Distinguishing features include [build, facial features, hair or fur, clothing layers, and equipment already acquired]. The torso faces [person or object], the head tilts [direction], and the gaze rests on [specific point]. [Brows, mouth, and posture] convey the reaction. [Specific hand or body part] acts on [subject or object] at [point of contact]. The weight rests on [foot or support], making the pose physically possible. [Describe the appearance, actions, responses, and relative positions of the other figures.]
 
@@ -18,12 +18,12 @@ Look from [direction and height] toward [subject], framed as [wide view, medium 
 Light falls from [direction] across [specific surfaces]. Use [linework, application of color, tonal range, and rendering of materials] to give the scene [established style and atmosphere]. [If the scene contains lettering, give the exact wording, surface, and orientation.] [Reserve the planned area for the selected quotation and editorial title, and describe the background texture to retain. Omit this only for the recorded wordless scope.]
 ~~~
 
-For landscape, still life, or an image drawn from a poem, spend the detail on shape, depth, light, color, and signs of time passing. Include details required by the text or chosen for this particular design. See the [English translation of the worked prompt](../examples/tide-line/prompt.txt) for a scene without figures.
+For landscape, still life, or an image drawn from a poem, spend the detail on shape, depth, light, color, and signs of time passing. Include details required by the text or chosen for this particular design. The [tide-line export fixture](../examples/tide-line/project.json) demonstrates source quoting and export. Its retained color-print artwork and original prompt document an earlier sample. Use the fixed style above for new artwork.
 
 ## Next illustration in a sequence
 
 ~~~text
-Use the same established [style name and complete art-direction paragraph]. Create the next [aspect ratio and medium] illustration in the series. Depict the instant when [one new action or state].
+Use Gongbi Narrative Illustration on a Silk-Textured Ground. [Insert the complete fixed art-direction paragraph from SKILL.md.] Create the next [aspect ratio] illustration in the series. Depict the instant when [one new action or state].
 
 Use input image [number] for [identity, prop design, setting, or technique]. Carry forward [specific features verified in that image]. Input image [number] establishes [the state of the scene or another reference]. Retain [visible features that still apply].
 
@@ -48,12 +48,12 @@ A wrong narrative moment, viewpoint, or overall composition calls for a revised 
 
 ## Cover artwork
 
-For a new chapter or series, prepare dedicated cover artwork and a title template. Use this prompt to generate the background in the established style, review it, and add titles using the layout tool. A cover uses its own composition and source file.
+For the first installment of a series, prepare dedicated shared cover artwork and a title template. Later chapters reuse the effective background and template with the current chapter wording. Use this prompt to generate the background in the skill's fixed style, review it, and add titles using the layout tool. A cover uses its own composition and source file.
 
 ~~~text
-Create dedicated cover artwork for [work title and installment]. Follow the established [style name and full art-direction paragraph]. Use [composition or motifs justified by the work and this passage], with [visible features of any bound character, prop, or setting designs]. The principal form is [focal shape and position]. Organize [foreground, middle ground, and distance] to give the cover a clear silhouette and hierarchy at thumbnail size.
+Create dedicated cover artwork for [the series]. Use Gongbi Narrative Illustration on a Silk-Textured Ground. [Insert the complete fixed art-direction paragraph from SKILL.md.] Use [a composition justified by the work as a whole and suitable for reuse across chapters], with [visible features of any bound character, prop, or setting designs]. The principal form is [focal shape and position]. Organize [foreground, middle ground, and distance] to give the cover a clear silhouette and hierarchy at thumbnail size.
 
-Use [palette, linework, application of color, and surface texture] consistently with the story illustrations. Leave [specific region, proportions, and background value] clear for the work title, installment identifier, and chapter title, arranged in [reading direction]. The background artwork is unlettered so that the verified titles can be typeset on a separate layer. Compose for [final aspect ratio and crop]. For a series template, retain [stable compositional features] across later installments.
+Use [palette, linework, application of color, and surface texture] consistently with the story illustrations. Leave [specific region, proportions, and background value] clear for the chapter identifier and original chapter title, arranged in [reading direction]. The background artwork is unlettered so that the verified titles can be typeset on a separate layer. Compose for [final aspect ratio and crop]. For a series template, retain [stable compositional features] across later installments.
 ~~~
 
-Record the full prompt and reviewed background as cover sources. Typeset the exact work title, installment identifier, and chapter title. Export and inspect the flattened cover and transparent type layer. For later installments, reuse the effective background and template and change the installment wording.
+Record the full prompt and reviewed background as cover sources. Typeset the exact chapter identifier and original chapter title according to the existing template. Export and inspect the flattened cover and transparent type layer. For later installments, reuse the effective background and template and change the installment wording.

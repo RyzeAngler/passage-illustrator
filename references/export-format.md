@@ -1,5 +1,7 @@
 # Export configuration
 
+This reference describes the bundled lower-level renderer. Retained production files follow the [established chapter layout](materials.md#workspace-layout). Derive a temporary rendering configuration and stage its inputs when integrating with those directories, then verify the final chapter files and links.
+
 Keep the UTF-8 JSON configuration, master artwork, and any fonts in the same project directory. Input paths are relative to the configuration file and may point into subdirectories. Set `skill_dir` to the installed skill directory and `work_dir` to the project directory.
 
 ~~~sh

@@ -6,7 +6,7 @@
 
 Turn a passage into an illustration or a sequence grounded in the text. The agent selects a moment to depict, writes the image prompt, generates the artwork, and opens the result to check it against the passage. Across a sequence, it tracks who holds each object, what has changed in the setting, and which details identify a returning character.
 
-For a new work, the skill establishes an explicit art direction and shared character, setting, and prop designs before story generation. A standard chapter or series includes a separate cover and story images typeset with scene titles and source quotations. Explicit requests can select wordless art or a particular stage.
+For a new work, the skill applies its built-in **Gongbi Narrative Illustration on a Silk-Textured Ground** style and establishes shared character, setting, and prop designs before story generation. A standard chapter or series includes a separate cover and story images typeset with scene titles and source quotations. Explicit requests can select wordless art or a particular stage.
 
 The skill includes four prompt templates for first illustrations, subsequent scenes, local corrections, and dedicated cover artwork. The agent fills each template from the passage, storyboard, and design references. [Image prompt templates](references/prompts.md) · [Prompt-writing standard](SKILL.md#writing-image-prompts)
 
@@ -14,7 +14,7 @@ The skill includes four prompt templates for first illustrations, subsequent sce
 
 ![A white scallop shell rests on the wet gray stone of the lowest step, just above the waterline.](examples/tide-line/base.png)
 
-The edge of the tread tells the reader exactly where the shell lies. The change from dark, wet stone to lighter stone farther up suggests how recently the tide receded. This English edition retains the artwork generated for the original Chinese passage. [Scene brief and review](examples/tide-line/scene.md) · [English prompt](examples/tide-line/prompt.txt) · [Original generation prompt](examples/tide-line/prompt.zh.txt) · [Export configuration](examples/tide-line/project.json)
+This retained color-print image is an export fixture from an earlier sample. New illustrations use the built-in gongbi style. The edge of the tread tells the reader exactly where the shell lies. The change from dark, wet stone to lighter stone farther up suggests how recently the tide receded. This English edition retains the artwork generated for the original Chinese passage. [Scene brief and review](examples/tide-line/scene.md) · [English prompt](examples/tide-line/prompt.txt) · [Original generation prompt](examples/tide-line/prompt.zh.txt) · [Export configuration](examples/tide-line/project.json)
 
 See [Project setup](references/project-setup.md) for the first-production requirements and [Reference assets and continuity](references/continuity.md) for managing designs across chapters.
 
@@ -56,9 +56,9 @@ For other layouts, use the absolute path to the directory containing `SKILL.md`.
 - “Use $passage-illustrator to create a wordless landscape illustration for this passage.”
 - “Illustrate chapter three of the attached book. Carry the character designs forward from chapter two, use quotations for the captions, and deliver the finished images and a download archive.”
 - “Check this image against the passage and the previous illustration. The wrong character is holding the object. Fix the handoff and export it in the existing layout.”
-- “Deliver only the storyboard and the prompt for each image. Use the project's established style and aspect ratio.”
+- “Deliver only the storyboard and the prompt for each image. Use the skill's fixed style and the project's aspect ratio.”
 
-Producing and checking artwork requires image generation and image viewing in the host application. The precision of a local correction also depends on the available editing tools. A text-only host can prepare the source text, storyboard, and prompts. Existing art assets and publishing tools can be used throughout. The work determines the style, language, captions, cover design, and dimensions.
+Producing and checking artwork requires image generation and image viewing in the host application. The precision of a local correction also depends on the available editing tools. A text-only host can prepare the source text, storyboard, and prompts. Existing art assets and publishing tools can be used throughout. The work determines the subjects, language, captions, cover composition, and dimensions within the fixed painting style.
 
 ## Export the example
 

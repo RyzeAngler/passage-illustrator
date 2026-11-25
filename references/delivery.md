@@ -1,6 +1,6 @@
 # Lettering, export, and delivery
 
-For a chapter or series, follow the default package and initial specifications in [Project setup](project-setup.md). Resolve the art direction and typography before generation. At final review, check the actual captioned PNGs, separate cover PNG, and transparent cover type layer against that package. Follow a recorded explicit scope such as wordless art or a single illustration.
+For a chapter or series, follow the default package and initial specifications in [Project setup](project-setup.md). Apply the fixed style from SKILL.md and establish typography before generation. At final review, check the actual captioned PNGs, separate cover PNG, and transparent cover type layer against that package. Follow a recorded explicit scope such as wordless art or a single illustration.
 
 ## Captions, lettering within the scene, and page layout
 
@@ -20,9 +20,11 @@ Establish the work's layout specifications once and record variations for indivi
 
 Link each layout to its image ID, title, master artwork path and hash, source paragraphs, wording, and text positions. After replacing a master, update the hash and check composition, crop, and clear space again. Fit the master to its final dimensions in one operation. Check the actual output. Automated checks cover quotations, bounds, and pixels. Inspect the artwork to judge whether type obscures an action or sits well with the illustration.
 
+The global designs and shared cover sources have the [workspace layout](materials.md#workspace-layout).
+
 ## Covers and export
 
-A new chapter or series needs dedicated cover artwork and a shared title template created as part of production. Generate the background using the cover prompt and global art direction, open it, review it, and record its source and hash. An established series reuses the effective background and template. Store the background, canvas, fonts, and title positions in the template. Set the installment identifier and title for each cover. For long titles, inspect the bounds and reading order, then adjust position and type size as needed. Retain the flattened cover, its transparent type layer, the source background, the font information, and the relevant hashes for future editions.
+For the first installment of a series, create dedicated shared cover artwork and a title template as part of production. Later chapters reuse the effective background and template and replace the chapter wording. Generate the background using the cover prompt and skill's fixed art direction, open it, review it, and record its source and hash. An established series reuses the effective background and template. Store the background, canvas, fonts, and title positions in the template. Set the installment identifier and title for each cover. For long titles, inspect the bounds and reading order, then adjust position and type size as needed. Retain the flattened cover, its transparent type layer, the source background, the font information, and the relevant hashes for future editions.
 
 Use the project's existing tools or the bundled exporter. The bundled tool produces illustration PNGs, an HTML review page, a manifest, and an ordered ZIP of the illustrations. A configured cover also produces a separate cover image and transparent type layer. Request a JPEG contact sheet when useful. See [Export configuration](export-format.md).
 

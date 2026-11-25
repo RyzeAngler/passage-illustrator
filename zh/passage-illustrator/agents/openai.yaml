@@ -1,6 +1,6 @@
 interface:
   display_name: "Passage Illustrator · 原文配图"
-  short_description: "依据原文选景并制作插画，维护跨图连续性，核对画面、返修并交付成图"
+  short_description: "以固定工笔设色画风依据原文配图，管理全局设定、配文和封面并核对交付"
   icon_small: "./assets/icon.png"
   icon_large: "./assets/icon.png"
   default_prompt: "请用 $passage-illustrator 为我提供的原文制作配图，按原文核对画面后交付。"
